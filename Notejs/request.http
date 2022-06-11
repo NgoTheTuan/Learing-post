@@ -1,0 +1,59 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username":"tuan3",
+    "password":"tuan"
+}
+
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username":"tuan",
+    "password":"tuan"
+}
+
+
+###
+
+GET http://localhost:5000/api/auth
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjFiOGY2MWRhZWQxNWQ5ODAxYWJjNDYiLCJpYXQiOjE2NDY2MjEzNDd9.fOgaut6lDEsquiIohREvDBIQfxa56q949sFjAfihRNs
+
+
+###
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjFiOGY2MWRhZWQxNWQ5ODAxYWJjNDYiLCJpYXQiOjE2NDY2NjI0NTZ9.XuXXJRGeMN430Z6F5zdQ2G8iLoIxdtHPZpQSR3jKFQA
+
+{
+    "title":"Ngo Thi Lan",
+    "description":"Trum do tre em",
+    "url":"facebook.com",
+    "status":"LEARNING"
+}
+
+###
+GET http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjFiOGY2MWRhZWQxNWQ5ODAxYWJjNDYiLCJpYXQiOjE2NDYwNTg1NTV9.d9CCP3pzrVX8mzFY3HxKX3AbkG0eBTrNcVhGIaW4iJE
+
+
+###
+PUT http://localhost:5000/api/posts/621cdc7e6310e0f4ee48a2c2
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjFiOGY2MWRhZWQxNWQ5ODAxYWJjNDYiLCJpYXQiOjE2NDYwNjAwNTZ9.0_eTTVBUICkdCnvhQVfbdaZih3HKtLnRj3StOP0oBwY
+
+{
+    "title":"NGO THI LAN",
+    "description":"Chuyen ban cac loai quan ao tre em",
+    "url":"facebook.com",
+    "status":"LEARNING"
+}
+
+###
+DELETE http://localhost:5000/api/posts/621cdc7e6310e0f4ee48a2c2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjFiOGY2MWRhZWQxNWQ5ODAxYWJjNDYiLCJpYXQiOjE2NDYwNjA1NDR9.jxUxIJ-HBQ7qhdwg0S7fv33BE6A18xtrSkiz_a8kczU
+
